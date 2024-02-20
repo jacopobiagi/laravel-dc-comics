@@ -8,6 +8,11 @@
         @foreach ($comics as $comic)
             <li>
                 <a href="{{ route('users.show', $comic -> id) }}">{{$comic -> title}}</a>
+                <form action="{{route('users.destroy', $comic -> id)}}" method="POST" style="display: inline-block">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="Canc">
+                </form>
             </li>
         @endforeach
     </ul>
