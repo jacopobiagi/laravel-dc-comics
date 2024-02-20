@@ -8,3 +8,5 @@ Route::get('/users/create', [ComicController :: class, 'create']) ->name('users.
 Route::post('/users', [ComicController :: class, 'store']) ->name('users.store');
 Route::get('/users/{id}', [ComicController :: class, 'show']) ->name('users.show');
 Route::delete('/users/{id}', [ComicController :: class, 'destroy']) ->name('users.destroy');
+Route::get('/users/{id}/edit', [ComicController :: class, 'edit']) ->name('users.edit');
+Route::put('/users/{id}', [ComicController :: class, 'update']) ->name('users.update');
